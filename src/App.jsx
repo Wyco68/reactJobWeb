@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Jobspage from "./pages/Jobspage";
-import JobDetail from "./pages/JobDetail";
+import JobDetail,{jobLoader} from "./pages/JobDetail";
 import AddJob from "./pages/AddJob";
 import NotFoundPage from "./pages/NotFoundPage";
 import MainLayout from "./layouts/MainLayout";
@@ -16,7 +16,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<Homepage />} />
       <Route path='/jobs' element={<Jobspage/>} />
-      <Route path='/jobs/:id' element={<JobDetail/>} />
+      <Route path='/jobs/:id' element={<JobDetail/>} loader={jobLoader} />
       <Route path='*' element={<NotFoundPage/>} />
     </Route>
   )
