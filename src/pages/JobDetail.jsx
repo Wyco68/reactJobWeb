@@ -15,7 +15,7 @@ const JobDetail = ({deleteJob}) => {
       deleteJob (jobId);
 
       toast.success('Job deleted successfully')
-
+      
       navigate('/jobs');
     }
     
