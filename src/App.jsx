@@ -23,6 +23,13 @@ const App = () => {
       body: JSON.stringify(newJob),
     })
     return;
+  }
+
+  const deleteJob= async(id)=>{
+    const res= await fetch(`/api/jobs/${id}`,{
+      method:'DELETE',
+    })
+    return;
     
   }
   
@@ -31,7 +38,7 @@ const App = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Homepage />} />
         <Route path='/jobs' element={<Jobspage/>} />
-        <Route path='/jobs/:id' element={<JobDetail/>} loader={jobLoader} />
+        <Route path='/jobs/:id' element={<JobDetail deleteJob={deleteJob}/>} loader={jobLoader} />
         <Route path='/add-job' element={<AddJob addJobSubmit={addJob}/>}  />
         <Route path='*' element={<NotFoundPage/>} />
       </Route>
