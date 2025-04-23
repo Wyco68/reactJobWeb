@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "0e1f",
+      "type": "Internship",
+      "title": "Testing",
+      "description": "Need to check if there is any change in the JSON file",
+      "salary": "Under $50K",
+      "location": "Home",
+      "company": {
+        "name": "HireYourSelf",
+        "description": "",
+        "contactEmail": "hireyourself@gmail.com",
+        "contactPhone": ""
+      }
     }
   ]
 }

@@ -23,7 +23,7 @@ const JobListingSingular = ({job}) => {
                   </div>
 
                   <button onClick={()=>setShowFull((prevState)=>!prevState)}
-                   className="text-indigo-500 mb-5" hover:text-indigo-60>
+                   className="text-indigo-500 mb-5" hover:text-indigo-60="true">
                     {showFullDescription? 'Less' :'More...'}
                   </button>
   
